@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>😶‍🌫️</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        p {
+            position: absolute;
+            top: 5vh;
+            left: 35vw;
+        }
+        div {
+            margin-top: 2vh;
+            height: 25vh;
+            width: 80vw;
+            border: 0.1vw solid;
+            border-radius: 2%;
+        }
+        a {
+            position: absolute;
+            top: 13vh;
+            left: 25vw;
+            padding: 0.5vh 1vh 0.5vh 1vh;
+            background-color: lightgray;
+            border: 0.1vw solid;
+            border-radius: 3%;
+        }
+        #fujao {
+            position: absolute;
+            top: 13vh;
+            left: 64.5vw;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div>
+        <p>Você é minha prima?</p>
+        <a href="feliz.html">Sim</a>
+        <a id="fujao" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Não</a>
+    </div>
+
+
+    <script>
+        const fujaoEl = document.querySelector('#fujao');
+
+        var maxWidth = window.innerWidth - fujaoEl.offsetWidth;
+        var maxHeight = window.innerHeight - fujaoEl.offsetHeight;
+        function mudaPos() {
+            var newX = Math.floor(Math.random() * maxWidth);
+            var newY = Math.floor(Math.random() * maxHeight);
+            fujaoEl.style.left = newX + 'px';
+            fujaoEl.style.top = newY + 'px';
+        }
+
+        fujaoEl.addEventListener('mouseover', () => {
+            mudaPos();
+        });
+        fujaoEl.addEventListener('click', () => {
+            mudaPos();
+        });
+    </script>
+</body>
+</html>
